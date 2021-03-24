@@ -45,9 +45,9 @@
         state: latest
         
     - name: Reload service httpd
-      ansible.builtin.systemd:
+      service:
         name: httpd
-        state: reloaded        
+        state: restarted        
 
     - name: Download file and force basic auth
       get_url:
