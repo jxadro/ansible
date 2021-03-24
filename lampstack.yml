@@ -34,8 +34,8 @@
           - php-mysql 
         state: latest
 
-    - name: Copying your php file in the /var/www/html
-      copy:
-        src: /root/ansibleplaybook/index.php
-        dest: /var/www/html/index.php
+#    - name: Copying your php file in the /var/www/html
+#      copy:
+#        src: /root/ansibleplaybook/index.php
+#        dest: /var/www/html/index.php
 
