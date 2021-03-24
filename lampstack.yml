@@ -37,14 +37,23 @@
         enabled: yes
         state: started
 
-
     - name: Installing PHP
       yum:
         name: 
           - php 
           - php-mysql 
         state: latest
+        
+    - name: Reload service httpd
+      ansible.builtin.systemd:
+        name: httpd
+        state: reloaded        
 
+    - name: Download file and force basic auth
+      get_url:
+        url: http://example.com/path/file.conf
+        dest: /var/www/html/index.php
+    
 #    - name: Copying your php file in the /var/www/html
 #      copy:
 #        src: /root/ansibleplaybook/index.php
