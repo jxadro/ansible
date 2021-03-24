@@ -17,10 +17,10 @@
         
     - name: Add mariadb repository
       yum_repository:
-        name: MariaDB-10.3.14
-        description: MariaDB repo
+        name: mariadb
+        description: mariadb
         file: external_repos
-        baseurl: http://yum.mariadb.org/10.3.14/centos7-amd64
+        baseurl: http://yum.mariadb.org/10.5/centos7-amd64
         gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
         gpgcheck: yes        
     
